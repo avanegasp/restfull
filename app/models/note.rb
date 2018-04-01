@@ -1,8 +1,6 @@
 class Note < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
 
   validates :title, presence: true
   validates :content, presence: true
-  validates :content,  length: { minimum: 250 }
-
 end
